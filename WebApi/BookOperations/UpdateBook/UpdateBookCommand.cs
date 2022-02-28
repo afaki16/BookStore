@@ -20,7 +20,7 @@ namespace WebApi.BookOperations.UpdateBook
 
         public void Handle()  
         {
-            var book = _dbContext.Books.SingleOrDefault(x =>x.Id == BookId);
+            var book = _dbContext.Books.SingleOrDefault(x => x.Id == BookId);
             if (book == null)
             {
                 throw new InvalidCastException("Güncellenecek Kitap Bulunamadı");
