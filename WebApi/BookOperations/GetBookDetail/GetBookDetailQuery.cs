@@ -18,7 +18,7 @@ namespace WebApi.BookOperations.GetBooksDetail
         }
         public BooksDetailViewModel Handle()
         {
-            var book = _dbContext.Books.Where(book => book.Id == BookId).SingleOrDefault();
+            var book = _dbContext.Books.Where(book => book.Id ==BookId).SingleOrDefault();
             if (book is null)
                 throw new InvalidCastException("Kitap Bulunamadı");
             BooksDetailViewModel vm = new BooksDetailViewModel();
